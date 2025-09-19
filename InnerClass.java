@@ -1,13 +1,12 @@
 class Person {
-    String name;
-    int age;
-
     // Inner class Student
     class Student {
+        String name;
+        int age;
         Student(String name, int age) {
             // Refers to outer class fields
-            Person.this.name = name;
-            Person.this.age = age;
+            this.name = name;
+            this.age = age;
         }
 
         void display() {

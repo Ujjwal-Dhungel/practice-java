@@ -1,26 +1,30 @@
-class <T,k> Person{
-    private T name;
-    private T age;
-
-    public  void setname(String name){
-        this.name=name;
-     }
-    public String getname(){
-        return name;
+class Box<T>{
+    private T content;
+    public Box(T content){
+        this.content=content;
     }
-    public  void setage(int age){
-        this.age;
+    public T getContent(){
+        return content;
     }
-    public  int getage(){
-        return age;
+    public T setContent(T Content){
+        this.content=content;
+    }
+    public void showType(){
+        System.out.println("Type of T is "+content.getClass().getName());
     }
 }
 public class Generic{
-    public static void main(String[]args){
-        Person<String,Integer> str=new Person<>();
-        str.setname("ujjwal");
-        str.setage(16);
-        System.out.println("Name is :"+str.getname());
-        System.out.Println("Age is :"+str.getage());
-    }
+public static void main(String[] args) {
+    Box<Integer>intbox=new Box<>(100);
+    intbox.showType();
+    System.out.println("Value :"+intbox.getContent());
+
+    Box<String>strBox=new Box<>("Hello Genirics");
+    strBox.showType();
+    System.out.println("Value :"+strBox.getContent());
+
+    Box<Double>doubleBox=new Box<>(13.14);
+    doubleBox.showType();
+    System.out.println("Value :"+doubleBox.getContent());
+}
 }
