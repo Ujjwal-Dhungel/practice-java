@@ -6,9 +6,9 @@ class Box<T>{
     public T getContent(){
         return content;
     }
-    public T setContent(T Content){
-        this.content=content;
-    }
+    // public T setContent(T Content){
+    //     this.content=content;
+    // }
     public void showType(){
         System.out.println("Type of T is "+content.getClass().getName());
     }
